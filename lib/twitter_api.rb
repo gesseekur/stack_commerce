@@ -1,6 +1,6 @@
 class TwitterApi
   def self.our_public_tweets
-    client.user_timeline('chrissyteigen', count: 25, exclude_replies: false, include_rts: true)
+    @client.user_timeline('chrissyteigen', count: 25, exclude_replies: false, include_rts: true)
   end
 
   def self.client
@@ -9,4 +9,7 @@ class TwitterApi
       config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
     end
   end
+
+  @client.user_timeline("chrissyteigen")
+
 end

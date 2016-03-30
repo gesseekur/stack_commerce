@@ -1,0 +1,13 @@
+  [1m[36m (164.2ms)[0m  [1mDROP DATABASE IF EXISTS "stack_test"[0m
+  [1m[35m (784.6ms)[0m  CREATE DATABASE "stack_test" ENCODING = 'unicode'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by TwittersController#index as HTML
+  Rendered twitters/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2016-03-30 15:31:21 -0700
+Processing by TwittersController#index as HTML
+  Rendered twitters/index.html.erb within layouts/application (847.3ms)
+Completed 200 OK in 1338ms (Views: 1327.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK

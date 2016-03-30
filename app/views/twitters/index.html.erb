@@ -1,2 +1,10 @@
-<h1>Twitters#index</h1>
-<p>Find me in app/views/twitters/index.html.erb</p>
+<h2>Tweets by @chrissyteigen</h2>
+<ol>
+<% cache('our_public_tweets', expires_in: 5.minutes) do %>
+	<% TwitterApi.our_public_tweets.each do |tweet| %>
+	<li> <%= parsed_tweet tweet %> <strong><%= tweet.created_at %></strong></li>
+
+	<% end %>
+<% end %>
+</ol>
+

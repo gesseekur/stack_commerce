@@ -10,6 +10,5 @@ class TwitterApi
     end
   end
 
-  @client.user_timeline("chrissyteigen")
 
 end

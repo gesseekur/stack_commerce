@@ -1,7 +1,6 @@
-require "twitter"
 
 class TwitterApi
-  @@client = '';
+  @@client
 
   def self.client
     @@client ||= Twitter::REST::Client.new do |config|

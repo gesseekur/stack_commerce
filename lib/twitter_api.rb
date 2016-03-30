@@ -1,6 +1,9 @@
-require 'twitter'
+# require 'twitter'
 
 class TwitterApi
+  def self.our_public_tweets
+    client.user_timeline('chrissyteigen', count: 25, exclude_replies: false, include_rts: true)
+  end
 
   def self.client
     @client ||= Twitter::REST::Client.new do |config|
@@ -9,9 +12,6 @@ class TwitterApi
     end
   end
 
-  def self.our_public_tweets
-    @client.user_timeline('chrissyteigen', count: 25, exclude_replies: false, include_rts: true)
-  end
 
 
 end
